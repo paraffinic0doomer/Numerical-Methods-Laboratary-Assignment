@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 //function to print the matrix
-void print(vector<vector<float>>mat,int n)
+void print_jordan(vector<vector<float>>mat,int n)
 {
     cout<<fixed<<setprecision(6)<<endl;  // set precision value so that the floating point number can take up to 6 digit from decimal
     for(int i=0;i<n;i++)
@@ -53,7 +53,7 @@ void gauss_elemination(vector<vector<float>>&mat,int n)
                 for(int k=0;k<(n+1);k++)
             {
                 mat[i][k]=(mat[i][k]*v)-(mat[e][k]*u);   //performing matrix row operation to make the elements under pivot zero
-                print(mat,n);
+                print_jordan(mat,n);
             }
             }
 
@@ -96,7 +96,7 @@ void jordan_elemination(vector<vector<float>>&mat,int n)
                  for(int k=0;k<(n+1);k++)
             {
                 mat[i][k]=(mat[i][k]*v)-(mat[e][k]*u);  //finding non zero row element below the processing element
-                print(mat,n);
+                print_jordan(mat,n);
             }
 
           }
@@ -110,7 +110,7 @@ void jordan_elemination(vector<vector<float>>&mat,int n)
     }
 }
 //performing row echalon method to make the pivot elements one to make the matrix identity
-void row_echalon(vector<vector<float>>&mat,int n)
+void row_echelon_jordan(vector<vector<float>>&mat,int n)
 {   
     cout<<"performing Row Echalon :"<<endl;
     for(int i=0;i<n;i++)
@@ -120,7 +120,7 @@ void row_echalon(vector<vector<float>>&mat,int n)
                 for(int j=0;j<(n+1);j++)
         {
             mat[i][j]=(mat[i][j]/w);
-            print(mat,n);
+            print_jordan(mat,n);
         }
     }
 
@@ -200,17 +200,17 @@ void Jordan_main()
         mat.push_back(temp);
     }
     cout<<"before any operation:"<<endl;
-   print(mat,n);
+   print_jordan(mat,n);
 
     gauss_elemination(mat,n);
     cout<<"after gauss elemination:"<<endl;
-    print(mat,n);
+    print_jordan(mat,n);
    jordan_elemination(mat,n);
    cout<<"after jordan elemination:"<<endl;
-    print(mat,n);
-    row_echalon(mat,n);
+    print_jordan(mat,n);
+    row_echelon_jordan(mat,n);
     cout<<"after row echalon:"<<endl;
-   print(mat,n);
+   print_jordan(mat,n);
     is_pivot_zero(mat,n);
     solution_type(mat,n);
 

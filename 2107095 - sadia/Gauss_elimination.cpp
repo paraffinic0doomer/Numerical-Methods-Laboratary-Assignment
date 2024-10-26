@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-//print function to display the matrix
-void print(vector<vector<float>>mat,int n)
+// function to display the matrix
+void print_gauss(vector<vector<float>>mat,int n)
 {   
     cout<<fixed<<setprecision(6)<<endl;  // set precision value so that the floating point number can take up to 6 digit from decimal
     for(int i=0;i<n;i++)
@@ -53,7 +53,7 @@ void Gaussian_function(vector<vector<float>>&mat,int n)
                 for(int k=0;k<(n+1);k++)
             {
                 mat[i][k]=(mat[i][k]*v)-(mat[e][k]*u); //performing matrix row operation to make the elements under pivot zero
-                print(mat,n);
+                print_gauss(mat,n);
             }
             }
 
@@ -88,9 +88,9 @@ void Gauss_Eliminations()
         mat.push_back(temp);
     }
     cout<<"before any operation:"<<endl;
-   print(mat,n);
+   print_gauss(mat,n);
    Gaussian_function(mat,n);
     cout<<"after gauss elemination:"<<endl;
-    print(mat,n);
+    print_gauss(mat,n);
 }
 
