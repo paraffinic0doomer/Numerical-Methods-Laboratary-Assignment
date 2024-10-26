@@ -12,7 +12,9 @@ using namespace std;
 int main()
 {
     cout<<endl<<endl<<endl;
-    cout<<"     Welcome to Numerical Methods Console Application:   "<<endl<<endl<<endl;
+    cout<<"     Welcome to Numerical Methods Console Application:   "<<endl;
+    cout<<endl;
+    cout<<endl;
     cout<<"1.Linear Equations"<<endl<<endl;
     cout<<"2.Non Linerar Equations"<<endl<<endl;
     cout<<"3.Differential Equation"<<endl<<endl;
