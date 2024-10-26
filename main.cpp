@@ -25,7 +25,8 @@ int main()
         cout<<"1.Jacobi Iterative Method"<<endl;
         cout<<"2.Gauss Seidel Iterative Method"<<endl;
         cout<<"3.Gauss Elimination"<<endl;
-        cout<<"4.Jordan Elimination"<<endl;
+        cout<<"4.Jordan Elimination"<<endl<<endl;
+        cout<<"Enter your choice:";
         int choice1;
         cin>>choice1;
         
