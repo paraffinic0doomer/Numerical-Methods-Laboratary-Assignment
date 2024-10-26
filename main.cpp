@@ -7,6 +7,7 @@
 #include "2107009-Shejan\Gauss_Seidel_Iterative_Method.cpp"
 #include "2107009-Shejan\Jacobi_Iterative_Method.cpp"
 #include "2107009-Shejan\Rungee_Kutta_Method.cpp"
+#include "2107026 - saleque\non_linear.h"
 using namespace std;
 int main()
 {
@@ -50,12 +51,14 @@ int main()
         }
         break;
     case 2:
-
+        non_linear();
+        break;
 
     case 3:
-    rungeKutta();
-    break;
+        rungeKutta();
+        break;
     case 4:
+         Inverse_Matrix();
     default:
         cout<<"Invalid Choices"<<endl;
         break;
