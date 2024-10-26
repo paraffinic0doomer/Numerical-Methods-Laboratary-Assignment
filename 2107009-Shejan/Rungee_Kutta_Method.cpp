@@ -97,10 +97,7 @@ void inputSelection() {
             exit(1); 
     }
 }
-int main()
-{
-    
-}
+
 
 
 
