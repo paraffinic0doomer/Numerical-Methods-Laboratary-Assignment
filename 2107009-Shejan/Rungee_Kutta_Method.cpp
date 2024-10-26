@@ -4,7 +4,7 @@
 using namespace std;
 
 double x0 = 0.0; 
-double y0 = 0.0; 
+double initial_y = 0.0; 
 double x = 2.0;  
 double h = 0.1;  
 int choice;      
@@ -29,7 +29,7 @@ double rungeKutta() {
     inputSelection();
     int n = static_cast<int>((x - x0) / h); 
     double k1, k2, k3, k4; 
-    double y = y0; 
+    double y = initial_y; 
 
     for (int i = 0; i < n; i++) {
         switch (choice) {
@@ -81,22 +81,23 @@ void inputSelection() {
 
     switch (choice) {
         case 1:
-            y0 = 1.0; 
+            initial_y = 1.0; 
             break;
         case 2:
-            y0 = 0.0; 
+            initial_y = 0.0; 
             break;
         case 3:
-            y0 = 0.0; 
+            initial_y = 0.0; 
             break;
         case 4:
-            y0 = 1.0; 
+            initial_y = 1.0; 
             break;
         default:
             cout << "Invalid choice!\n"; 
             exit(1); 
     }
 }
+
 
 
 

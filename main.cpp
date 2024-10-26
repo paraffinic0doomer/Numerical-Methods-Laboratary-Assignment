@@ -10,9 +10,55 @@
 using namespace std;
 int main()
 {
+    cout<<endl<<endl<<endl;
     cout<<"     Welcome to Numerical Methods Console Application:   "<<endl<<endl<<endl;
-    
-    
+    cout<<"1.Linear Equations"<<endl<<endl;
+    cout<<"2.Non Linerar Equations"<<endl<<endl;
+    cout<<"3.Differential Equation"<<endl<<endl;
+    cout<<"4.Matrix Inversion"<<endl<<endl<<endl<<endl;  
+    cout<<"Enter your choice:";
+    int choice;
+    cin>>choice;
+    switch (choice)
+    {
+    case 1:
+        cout<<"1.Jacobi Iterative Method"<<endl;
+        cout<<"2.Gauss Seidel Iterative Method"<<endl;
+        cout<<"3.Gauss Elimination"<<endl;
+        cout<<"4.Jordan Elimination"<<endl;
+        int choice1;
+        cin>>choice1;
+        
+        switch(choice1)
+        {
+            case 1:
+            jacobi();
+            break;
+            case 2:
+            gauss_seidel();
+            break;
+            case 3:
+            Gauss_Eliminations();
+            break;
+            case 4:
+            Jordan_main();
+            break;
+            default:
+            cout<<"Invalid Choices"<<endl;
+            
+        }
+        break;
+    case 2:
 
 
+    case 3:
+    rungeKutta();
+    break;
+    case 4:
+    default:
+        cout<<"Invalid Choices"<<endl;
+        break;
+    }
+    
+    
 }
